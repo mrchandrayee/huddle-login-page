@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap');
+*{box-sizing:border-box}
+:root{--bg:#0b0a13;--panel:#fff;--ink:#18171e;--muted:#88858f;--purple:#6c2cff}
+body{margin:0;min-height:100vh;background:var(--bg);color:#f7f6fb;font-family:Inter,system-ui,sans-serif}
+.topbar{height:42px;border-bottom:1px solid #262431;display:flex;align-items:center;justify-content:space-between;padding:0 17px;color:#777485;font:10px 'DM Mono',monospace}
+.traffic{display:flex;gap:4px}.traffic i{width:6px;height:6px;border-radius:50%;background:#ff5d64}.traffic i:nth-child(2){background:#ffca4c}.traffic i:nth-child(3){background:#43d18b}
+.crumb{color:#6d697c}.crumb span{color:#d8d5e1}.crumb b{color:#ec91b8}.crumb strong{color:#83b5ff}.crumb em{color:#e8c46a;font-style:normal}.top-right{color:#6b6878}
+.shell{width:min(100% - 28px,790px);margin:0 auto;text-align:center}
+.eyebrow{font:8px 'DM Mono',monospace;letter-spacing:2px;color:#817c91;margin-top:28px}
+.wordmark{font-weight:800;font-size:20px;letter-spacing:-.8px;margin:7px 0 26px}.wordmark span{color:#8a6cff}
+.login-card{display:grid;grid-template-columns:1fr 1fr;min-height:405px;background:#fff;border-radius:12px;overflow:hidden;text-align:left;box-shadow:0 18px 55px #0006}
+.art-panel{background:#eeebf1;position:relative;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;min-height:405px}
+.art-glow{position:absolute;width:250px;height:170px;bottom:-100px;left:50%;transform:translateX(-50%);background:#d9d0e7;filter:blur(30px);border-radius:50%}
+.characters{position:relative;width:100%;max-width:340px;margin:0 0 7px;z-index:1;overflow:visible}
+.purple-character{transform-origin:150px 180px;animation:float 4.2s ease-in-out infinite}
+.black-character{transform-origin:220px 180px;animation:float 3.5s ease-in-out -1s infinite}
+.yellow-character{transform-origin:280px 180px;animation:float 4.5s ease-in-out -2s infinite}
+.orange-character{transform-origin:100px 190px;animation:float 4s ease-in-out -1.5s infinite}
+.art-caption{position:absolute;top:20px;left:0;right:0;text-align:center;color:#b0aab9;font:9px 'DM Mono',monospace;letter-spacing:.4px}
+.form-panel{padding:31px 31px 22px;color:var(--ink);display:flex;flex-direction:column;align-items:stretch}
+.sparkle{text-align:center;color:#17171a;font-size:17px;margin-bottom:5px}
+.form-panel h1{text-align:center;font-size:17px;letter-spacing:-.5px;margin:0 0 4px;font-weight:800}
+.subtitle{text-align:center;color:#96929c;font-size:9px;margin:0 0 23px}
+.field-label{display:block;font-size:9px;color:#66636d;font-weight:600;margin:0 0 5px}
+.field{width:100%;height:32px;border:0;border-bottom:1px solid #e7e5e9;border-radius:0;background:transparent;outline:0;color:#25232a;font:10px Inter,sans-serif;padding:0 1px;transition:border-color .2s}
+.field:focus{border-color:#8b6bff}
+.field::placeholder{color:#b8b5bd}
+.password-heading{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.text-button{border:0;background:none;padding:0;color:#8172bb;font-size:8px;cursor:pointer}
+.password-wrap{position:relative}.password-wrap .field{padding-right:27px}
+.eye{position:absolute;right:0;top:4px;border:0;background:transparent;padding:3px;color:#8c8991;cursor:pointer}
+.eye svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.6}
+.options{display:flex;align-items:center;justify-content:space-between;margin:13px 0 14px}
+.remember{display:flex;align-items:center;gap:6px;color:#6e6b74;font-size:8px;cursor:pointer}
+.remember input{position:absolute;opacity:0}
+.checkmark{width:9px;height:9px;border:1px solid #b7b3be;border-radius:3px;display:inline-grid;place-items:center}
+.remember input:checked+.checkmark{background:#17171c;border-color:#17171c}
+.remember input:checked+.checkmark:after{content:"";width:4px;height:2px;border-left:1px solid white;border-bottom:1px solid white;transform:rotate(-45deg);margin-top:-1px}
+.login-button{width:100%;height:31px;border:0;border-radius:20px;background:#15151a;color:white;font-size:9px;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
+.login-button:hover{background:#33265e;transform:translateY(-1px)}
+.or{display:flex;align-items:center;gap:9px;color:#aaa6af;font-size:8px;margin:11px 0}.or span{height:1px;background:#eceaee;flex:1}
+.google-button{width:100%;height:31px;border:0;border-radius:20px;background:#f3f1f5;color:#302e35;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer}
+.google-button svg{width:12px;height:12px}
+.signup{text-align:center;color:#99959e;font-size:8px;margin:14px 0 0}.signup a{color:#7654dc;text-decoration:none;font-weight:700}
+.form-status{min-height:11px;text-align:center;color:#7252d8;font-size:8px;margin:5px 0 0}
+footer{color:#7d7888;font:8px/1.8 'DM Mono',monospace;margin:15px 0 23px}footer span{color:#d5cfe0}
+dialog{width:min(90%,350px);border:1px solid #e8e4ef;border-radius:17px;padding:0;box-shadow:0 20px 80px #0008}dialog::backdrop{background:#080710bd;backdrop-filter:blur(5px)}
+.dialog-content{padding:27px;color:#201e26;position:relative}.dialog-close{position:absolute;right:15px;top:12px;border:0;background:none;font-size:22px;color:#777;cursor:pointer}.dialog-content .sparkle{color:#7654dc}.dialog-content h2{text-align:center;font-size:18px;margin:0 0 7px}.dialog-content p{text-align:center;color:#88838f;font-size:10px;margin:0 0 22px}.dialog-content .login-button{margin-top:22px}.dialog-status{min-height:12px;margin:10px 0 0!important;color:#7252d8!important}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(1deg)}}
+@media(max-width:620px){.login-card{grid-template-columns:1fr}.art-panel{min-height:170px;max-height:170px}.characters{width:250px;margin-bottom:-28px}.art-caption{top:13px}.form-panel{padding:25px 28px 20px}.wordmark{margin-bottom:18px}.shell{width:min(100% - 24px,420px)}.top-right{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
